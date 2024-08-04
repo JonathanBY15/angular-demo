@@ -1,0 +1,58 @@
+/* ---------- */
+/* ---------- */
+/* Status Box */
+/* ---------- */
+/* ---------- */
+
+.status-box {
+    background-color: #f0f0f0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+
+    max-width: 400px;
+    height: 80vh;
+
+    border-radius: 20px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+
+    margin-left: 50px;
+
+    overflow-y: auto;
+}
+
+
+
+
+
+/* --------- */
+/* --------- */
+/* Scrollbar */
+/* --------- */
+/* --------- */
+
+.status-box::-webkit-scrollbar {
+    width: 5px;
+    /* Width of the scrollbar */
+}
+
+.status-box::-webkit-scrollbar-track {
+    background: #cbe5ff;
+    /* Background of the scrollbar track */
+    border-radius: 10px;
+}
+
+.status-box::-webkit-scrollbar-thumb {
+    background: #56a8fa;
+    /* Color of the scrollbar thumb */
+    border-radius: 10px;
+}
+
+.status-box::-webkit-scrollbar-thumb:hover {
+    background: #2d7abf;
+    /* Color of the hovered scrollbar thumb */
+    border-radius: 10px;
+}

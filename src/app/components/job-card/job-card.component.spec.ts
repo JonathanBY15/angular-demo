@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalButtonComponent } from './modal-button.component';
+import { ModalButtonComponent } from './job-card.component';
 
 describe('ModalButtonComponent', () => {
   let component: ModalButtonComponent;
@@ -10,7 +10,7 @@ describe('ModalButtonComponent', () => {
     await TestBed.configureTestingModule({
       imports: [ModalButtonComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ModalButtonComponent);
     component = fixture.componentInstance;

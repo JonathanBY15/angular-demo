@@ -17,10 +17,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-modal-button',
+  selector: 'job-card',
   standalone: true,
-  templateUrl: './modal-button.component.html',
-  styleUrls: ['./modal-button.component.css']
+  templateUrl: './job-card.component.html',
+  styleUrls: ['./job-card.component.css']
 })
 export class ModalButtonComponent {
   isEditMode: boolean = false;

@@ -1,7 +1,36 @@
 <!-- Button that triggers the modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#jobDetailsModal">
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#jobDetailsModal">
     Job Card'ı temsil eden bişey
-</button>
+</button> -->
+
+
+<!-- <div data-toggle="modal" data-target="#jobDetailsModal">
+    Job Card'ı temsil eden bişey
+</div> -->
+
+
+<!-- <div class="job-card card" style="width: 18rem;" data-toggle="modal" data-target="#jobDetailsModal">
+    <div class="card-body">
+        <h5 class="card-title">Google</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Senior Software Developer</h6>
+    </div>
+</div> -->
+
+
+<div class="job-card card">
+    <div class="card-body">
+        <h5 class="card-title">Google</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Senior Software Developer</h6>
+    </div>
+    <div class="button-container">
+        <i class="card-menu-button card-button fa-solid fa-ellipsis" data-toggle="modal"
+            data-target="#jobDetailsModal"></i>
+        <i class="card-link-button card-button fa-solid fa-link"></i>
+        <i class="card-delete-button card-button fa-solid fa-trash-can"></i>
+    </div>
+</div>
+
+
 
 <!-- Modal -->
 <div class="modal fade" id="jobDetailsModal" tabindex="-1" role="dialog" aria-hidden="true">
