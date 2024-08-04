@@ -1,8 +1,8 @@
 # Angular Demo
 
-Navbar, Job Details, ve Job Edit Form koydum, biraz daha kurcalayıp ana repoya taşıycam. Firebase bağlı değil buna.
+### Job Status Box and Job Cards that open Details/Edit modal:
+![alt text](demo1.gif)
 
-![alt text](toggle.gif)
-
+### New Job Form:
 ![alt text](demo.png)
 
