@@ -1,0 +1,31 @@
+/* Navbar rengi ve font boyutu */
+.navbar {
+    background-color: #70b8ff;
+    font-size: 18px;
+}
+
+/* Logo boyutu ve hizası */
+#nav-logo {
+    height: 40px;
+    vertical-align: middle;
+}
+
+/* Nav elementlerini sağa hizala (user, settings, language) */
+.navbar-nav {
+    margin-left: auto;
+}
+
+/* User, Settings, Language */
+.nav-link {
+    text-align: center;
+    width: 120px;
+    color: rgb(40, 40, 40);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* HOVER: User, Settings, Language */
+.nav-link:hover {
+    background-color: #396fa5;
+    color: rgb(238, 238, 238);
+}

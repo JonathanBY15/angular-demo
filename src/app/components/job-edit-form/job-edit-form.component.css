@@ -1,0 +1,17 @@
+/* Formun en dışındakı container */
+#job-edit-form-container {
+    margin-top: 50px;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #00000005;
+    border-radius: 20px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+
+/* Formu ortalamak için host'a flexbox */
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
