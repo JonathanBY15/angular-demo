@@ -20,7 +20,9 @@
 /* ---------- */
 
 .navbar {
-    background-color: #41a0ffc4;
+    /* background-color: #41a0ffc4; */
+    /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+    background-image: linear-gradient(120deg, #e0c3fcd2 0%, #8ec5fcda 100%);
     backdrop-filter: blur(6px);
     width: 100%;
     border-radius: 20px 20px 0 0;
@@ -58,7 +60,8 @@
 /* ---------- */
 
 .status-box {
-    background-color: #cbe5ff67;
+    /* background-color: #cbe5ff67; */
+    background-image: linear-gradient(120deg, #e0c3fc49 0%, #8ec5fc49 100%);
 
     display: flex;
     flex-direction: column;
@@ -89,13 +92,14 @@
 }
 
 .status-box::-webkit-scrollbar-track {
-    background: #cbe5ff;
+    background: #d2e8ff;
     /* Background of the scrollbar track */
     border-radius: 10px;
 }
 
 .status-box::-webkit-scrollbar-thumb {
     background: #56a8fa;
+    /* background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%); */
     /* Color of the scrollbar thumb */
     border-radius: 10px;
 }
