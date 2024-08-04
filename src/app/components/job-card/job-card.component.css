@@ -70,6 +70,7 @@
 .modal-content {
     height: 1200px;
     border-radius: 20px;
+    background-color: #f0f0f0;
 }
 
 /* Tarihi sağa yasla */
@@ -122,7 +123,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #56a8fa;
+    /* background-color: #56a8fa; */
+    background-image: linear-gradient(120deg, #e0c3fcd2 0%, #8ec5fcda 100%);
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -135,7 +137,7 @@
     /* Adjusted width to fit the text */
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: #f0f0f0;
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -173,7 +175,7 @@ input:checked+.slider:before {
     /* Adjusted width to fit the text */
     transform: translateY(-50%);
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
     /* Adjust as needed */
     color: black;
     /* Adjust text color as needed */
