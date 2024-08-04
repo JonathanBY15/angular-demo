@@ -1,3 +1,10 @@
+/* -------------- */
+/* -------------- */
+/* Modal Ayarları */
+/* -------------- */
+/* -------------- */
+
+
 /* Modal boyu ve border radius*/
 .modal-content {
     height: 1200px;
@@ -15,4 +22,108 @@
 /* Tarih font boyutu */
 #application-date-span {
     font-size: 16px;
+}
+
+
+
+
+
+
+
+
+/* --------------- */
+/* --------------- */
+/* Switch Ayarları */
+/* --------------- */
+/* --------------- */
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    /* Adjusted width to fit the text */
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #56a8fa;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 60px;
+    /* Adjusted width to fit the text */
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #56a8fa;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #56a8fa;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(72px);
+    -ms-transform: translateX(72px);
+    transform: translateX(72px);
+}
+
+/* Rounded slider */
+.slider.round {
+    border-radius: 34px;
+    width: 140px;
+}
+
+.slider.round:before {
+    border-radius: 34px;
+    /* Adjusted to match slider height */
+}
+
+/* Slider text */
+.slider-text {
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    /* Adjusted width to fit the text */
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 14px;
+    /* Adjust as needed */
+    color: black;
+    /* Adjust text color as needed */
+    user-select: none;
+}
+
+
+.slider-text:nth-child(1) {
+    left: 4px;
+}
+
+.slider-text:nth-child(2) {
+    right: 4px;
 }

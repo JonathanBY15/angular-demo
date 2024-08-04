@@ -3,69 +3,156 @@
     Job Card'ı temsil eden bişey
 </button>
 
-
 <!-- Modal -->
-<div class="modal fade" id="jobDetailsModal" tabindex="-1" role="dialog" aria-labelledby="jobDetailsModalLabel"
-    aria-hidden="true">
+<div class="modal fade" id="jobDetailsModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="jobDetailsModalLabel">Insights | Edit</h5>
+                <!-- Rounded switch with text -->
+                <label class="switch">
+                    <input type="checkbox" (change)="toggleEditMode($event)">
+                    <span class="slider round">
+                        <span class="slider-text">Details</span>
+                        <span class="slider-text">Edit</span>
+                    </span>
+                </label>
+
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <h1><i class="fa-brands fa-google"></i> Google</h1>
-                <h3 id="role-date-heading">Senior Software Developer <span id="application-date-span">Application Date:
-                        08/04/2024</span></h3>
-                <hr>
-                <h3>Job Description</h3>
-                <div class="container">
-                    <p>
-                        About 25 Project Technology:
+                <!-- Details Page -->
+                <div [style.display]="isEditMode ? 'none' : 'block'">
+                    <h1><i class="fa-brands fa-google"></i> Google</h1>
+                    <h3 id="role-date-heading">Senior Software Developer
+                        <span id="application-date-span">Application Date: 08/04/2024</span>
+                    </h3>
+                    <hr>
+                    <h3>Job Description</h3>
+                    <div class="container">
+                        <p>
+                            About 25 Project Technology:
 
 
-                        It is a leading company in the software sector, offering innovative and creative solutions. As a
-                        team, we focus on maximizing user experience, providing an innovative and dynamic working
-                        environment.
+                            It is a leading company in the software sector, offering innovative and creative solutions.
+                            As a
+                            team, we focus on maximizing user experience, providing an innovative and dynamic working
+                            environment.
 
 
-                        Job Responsibilities:
+                            Job Responsibilities:
 
-                        Develop and implement high-quality, responsive user interfaces for desktop and mobile devices
-                        using modern frontend technologies
-                        Generate reusable components and keep a clean code base
-                        Write and implement unit tests
-                        Maintain and extend the functionality of existing projects
-                        Troubleshoot, debug issues, propose practical solutions and test solutions
-                        Participate in architectural discussions and decision-making processes.
-                        Collaborate with other team members, such as designers, other engineers ,product managers …
-                        Stay up-to-date on industry trends and new technologies to enhance the overall frontend
-                        development process.
+                            Develop and implement high-quality, responsive user interfaces for desktop and mobile
+                            devices
+                            using modern frontend technologies
+                            Generate reusable components and keep a clean code base
+                            Write and implement unit tests
+                            Maintain and extend the functionality of existing projects
+                            Troubleshoot, debug issues, propose practical solutions and test solutions
+                            Participate in architectural discussions and decision-making processes.
+                            Collaborate with other team members, such as designers, other engineers ,product managers …
+                            Stay up-to-date on industry trends and new technologies to enhance the overall frontend
+                            development process.
 
 
 
 
-                        Job Requirements:
+                            Job Requirements:
 
-                        BSc degree in Computer Science or related field
-                        2+ years experience in hands-on frontend development
-                        In-depth experience of HTML, CSS and JavaScript/TypeScript and their libraries and frameworks
-                        like React, NextJS, Tailwind, SCSS, etc.
-                        Experience in Responsive Development
-                        Experience with REST
-                        Familiarity with UI/UX design
-                        Experience in version controlling systems(Git)
-                        Good understanding of web standards
-                        Knowledge in security, performance, cross-browser compatibility
-                    </p>
+                            BSc degree in Computer Science or related field
+                            2+ years experience in hands-on frontend development
+                            In-depth experience of HTML, CSS and JavaScript/TypeScript and their libraries and
+                            frameworks
+                            like React, NextJS, Tailwind, SCSS, etc.
+                            Experience in Responsive Development
+                            Experience with REST
+                            Familiarity with UI/UX design
+                            Experience in version controlling systems(Git)
+                            Good understanding of web standards
+                            Knowledge in security, performance, cross-browser compatibility
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Edit Page -->
+                <div [style.display]="isEditMode ? 'block' : 'none'">
+                    <h3>Edit Job Details</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="companyName">Company Name</label>
+                            <input type="text" class="form-control" id="companyName" value="Google">
+                        </div>
+                        <div class="form-group">
+                            <label for="jobTitle">Job Title</label>
+                            <input type="text" class="form-control" id="jobTitle" value="Senior Software Developer">
+                        </div>
+                        <div class="form-group">
+                            <label for="job-edit-location">Location</label>
+                            <input type="text" class="form-control" id="job-edit-location" placeholder="San Francisco">
+                        </div>
+                        <div class="form-group">
+                            <label for="job-edit-remote">Çalışma Şekli</label>
+                            <select class="form-control" id="job-edit-remote">
+                                <option>Remote</option>
+                                <option>Hybrid</option>
+                                <option>On-Site</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="job-edit-jobUrl">Post URL</label>
+                            <input type="text" class="form-control" id="job-edit-jobUrl"
+                                placeholder="https://www.linkedin.com/jobs/view/3990696502">
+                        </div>
+                        <div class="form-group">
+                            <label for="jobDescription">Job Description</label>
+                            <textarea class="form-control" id="jobDescription" rows="20">
+About 25 Project Technology:
+
+It is a leading company in the software sector, offering innovative and creative solutions.
+As a
+team, we focus on maximizing user experience, providing an innovative and dynamic working
+environment.
+
+Job Responsibilities:
+
+Develop and implement high-quality, responsive user interfaces for desktop and mobile
+devices
+using modern frontend technologies
+Generate reusable components and keep a clean code base
+Write and implement unit tests
+Maintain and extend the functionality of existing projects
+Troubleshoot, debug issues, propose practical solutions and test solutions
+Participate in architectural discussions and decision-making processes.
+Collaborate with other team members, such as designers, other engineers ,product managers …
+Stay up-to-date on industry trends and new technologies to enhance the overall frontend
+development process.
+
+Job Requirements:
+
+BSc degree in Computer Science or related field
+2+ years experience in hands-on frontend development
+In-depth experience of HTML, CSS and JavaScript/TypeScript and their libraries and
+frameworks
+like React, NextJS, Tailwind, SCSS, etc.
+Experience in Responsive Development
+Experience with REST
+Familiarity with UI/UX design
+Experience in version controlling systems(Git)
+Good understanding of web standards
+Knowledge in security, performance, cross-browser compatibility
+                            </textarea>
+                        </div>
+                    </form>
                 </div>
             </div>
+
+            <!-- Modal footer -->
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary" [hidden]="!isEditMode">Save changes</button>
             </div>
+
         </div>
     </div>
 </div>
